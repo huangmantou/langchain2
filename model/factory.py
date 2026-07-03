@@ -15,12 +15,12 @@ class BaseModelFactory(ABC):
 
 class ChatModelFactory(BaseModelFactory):
     def generator(self)->Optional[Embeddings | BaseChatModel]:
-        return ChatTongyi(model=rag_conf["chat_model_name"], dashscope_api_key="sk-ws-H.RYYELPI.hTTa.MEYCIQCnkGUEtWzt_i7w4qaLTzxm-F7RCNyi9xW9DKlW5c4CNAIhALbDp1hd3rltR0q1FLAkfsE0U-txbX8rwEzJV0n2DQl1")
+        return ChatTongyi(model=rag_conf["chat_model_name"], dashscope_api_key="")
 
 
 class EmbeddingsFactory(BaseModelFactory):
     def generator(self) -> Optional[Embeddings | BaseChatModel]:
-        return DashScopeEmbeddings(model=rag_conf["embedding_model_name"],dashscope_api_key="sk-ws-H.RYYELPI.hTTa.MEYCIQCnkGUEtWzt_i7w4qaLTzxm-F7RCNyi9xW9DKlW5c4CNAIhALbDp1hd3rltR0q1FLAkfsE0U-txbX8rwEzJV0n2DQl1")
+        return DashScopeEmbeddings(model=rag_conf["embedding_model_name"],dashscope_api_key="")
 
 
 chat_model = ChatModelFactory().generator()

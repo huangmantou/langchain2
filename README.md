@@ -95,47 +95,35 @@
 | 前端 | Streamlit |
 | 配置 | YAML 驱动（Agent / RAG / Chroma / Prompts） |
 
-## 快速开始
+
 
 ### 环境要求
 
 - **Python** ≥ 3.10
-- **DashScope API Key**（[阿里云百炼](https://bailian.console.aliyun.com/) 申请）
+- **DashScope API Key**
 
-### 1. 克隆仓库
 
-```bash
-git clone https://github.com/lhh737/LangChain-ReAct-Agent.git
-cd LangChain-ReAct-Agent
-```
 
-### 2. 安装依赖
+
+### 配置 API Key
+
+在facory中配置api
 
 ```bash
-pip install -r requirements.txt
+class ChatModelFactory(BaseModelFactory):
+    def generator(self)->Optional[Embeddings | BaseChatModel]:
+        return ChatTongyi(model=rag_conf["chat_model_name"], dashscope_api_key="")
+
+
+class EmbeddingsFactory(BaseModelFactory):
+    def generator(self) -> Optional[Embeddings | BaseChatModel]:
+        return DashScopeEmbeddings(model=rag_conf["embedding_model_name"],dashscope_api_key="")
 ```
 
-### 3. 配置 API Key
 
-参考 `.env.example`，设置阿里云百炼 API Key：
 
-```bash
-# Linux / macOS
-export DASHSCOPE_API_KEY="your-api-key"
 
-# Windows (CMD)
-set DASHSCOPE_API_KEY=your-api-key
-```
-
-> 申请地址：[阿里云百炼控制台](https://bailian.console.aliyun.com/)
-
-### 4. 初始化知识库（首次运行）
-
-```bash
-python -c "from rag.vector_store import VectorStoreService; VectorStoreService().load_document()"
-```
-
-### 5. 启动应用
+### 启动应用
 
 ```bash
 streamlit run app.py
@@ -200,7 +188,7 @@ LangChain-ReAct-Agent/
 | `prompts.yml` | 各场景提示词模板文件路径 |
 | `agent.yml` | Agent 外部数据路径等 |
 
-dashscope_api_key已在factory中设置 在此不方便展示
+
 
 这个项目是我在别人的项目基础上利用codex进行改动和创新，不得不感叹现在ai对人类传统编程的降维打击。我很庆幸自己站在了时代的风口上，即使我对Java python只有基础的了解，但是我还是能够利用ai写出一个完整的项目
 
