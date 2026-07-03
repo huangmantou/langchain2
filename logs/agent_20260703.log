@@ -1,0 +1,9 @@
+2026-07-03 00:00:54,558 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-07-03 00:00:54,558 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | hello
+2026-07-03 00:01:14,762 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-07-03 00:01:14,762 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 退换货政策
+2026-07-03 00:01:16,198 - agent - INFO - middleware.py:19 - [tool monitor]执行工具：rag_summarize
+2026-07-03 00:01:16,199 - agent - INFO - middleware.py:20 - [tool monitor]传入参数：{'query': '退换货政策'}
+2026-07-03 00:01:19,544 - agent - INFO - middleware.py:24 - [tool monitor]工具rag_summarize调用成功
+2026-07-03 00:01:19,571 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有3条消息。
+2026-07-03 00:01:19,571 - agent - DEBUG - middleware.py:42 - [log_before_model]ToolMessage | 我们支持7天无理由退换货，商品需保持吊牌完好、未经穿着洗涤。退货请通过订单页面申请，审核通过后寄回指定地址。运费规则：非质量问题退换由客户承担，质量问题由我们承担。具体请参考订单详情页或联系客服确认。

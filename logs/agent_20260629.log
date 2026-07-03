@@ -1,0 +1,6 @@
+2026-06-29 00:10:22,556 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-06-29 00:10:22,556 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | hello
+2026-06-29 00:10:56,284 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-06-29 00:10:56,284 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 十四个坚持内容
+2026-06-29 00:11:11,500 - agent - INFO - middleware.py:40 - [log_before_model]即将调用模型，带有1条消息。
+2026-06-29 00:11:11,502 - agent - DEBUG - middleware.py:42 - [log_before_model]HumanMessage | 美国独立日
